@@ -149,20 +149,21 @@ $(document).ready(function () {
 
     //load a city recursive wrapper to load them in order/speed up mobile loading perception
     function loadCity(cities, windowWidth) {
+      var currentCity = cities[0]
       if (cities.length){
         currentLength = cities.length
-        addDivs(windowWidth)
-        mapOptions = setMapOptions(cities[0][1],cities[0][2])
-        
+        addDivs(currentCity, windowWidth)
+        mapOptions = setMapOptions(currentCity[1],currentCity[2])
+
         //make the bike map
-        bikeMap = new google.maps.Map(document.getElementById('bike-'+cities[0][0]),
+        bikeMap = new google.maps.Map(document.getElementById('bike-'+currentCity[0]),
         mapOptions);
         bikeMap.setOptions({styles: bikeStyles});
         var bikeLayer = new google.maps.BicyclingLayer();
         bikeLayer.setMap(bikeMap);
 
         //create the car map
-        var carMap = new google.maps.Map(document.getElementById('car-'+cities[0][0]),
+        var carMap = new google.maps.Map(document.getElementById('car-'+currentCity[0]),
         mapOptions);
         carMap.setOptions({styles: carStyles});
 
@@ -192,11 +193,11 @@ $(document).ready(function () {
         });
 
         //sometimes a map will not load, call the next city to load
-        setTimeout(function(){ 
+        setTimeout(function(){
           if (!bikeLoaded || !carLoaded) {
             cities.splice(0, 1);
             loadCity(cities, windowWidth);
-          } 
+          }
         }, 2000);
 
       } else {
@@ -204,34 +205,36 @@ $(document).ready(function () {
       }
     }
 
-    function addDivs(windowWidth) {
-      if (window.innerWidth >= 768){
+    function addDivs(currentCity, windowWidth) {
+      var currentCityName = currentCity[0]
+
+      if (windowWidth >= 768){
         $("#mainSqueeze").append(
-        '<div class="row textrow row-centered">'+ 
-          '<div class="col-xs-11 col-md-11 col-centered title"><h2>'+cities[0][0]+'</h2></div>'+
+        '<div class="row textrow row-centered">'+
+          '<div class="col-xs-11 col-md-11 col-centered title"><h2>'+currentCityName+'</h2></div>'+
           '<div class="col-xs-11 col-md-11 col-centered title"></div>'+
-        '</div>'+ 
-        '<div class="row maprow row-centered">'+
-          '<div class="col-xs-5 col-md-5 col-centered" id="bike-'+cities[0][0]+'"></div>'+
-          '<div class="col-xs-1 col-md-1 col-centered"></div>'+
-          '<div class="col-xs-5 col-md-5 col-centered" id="car-'+cities[0][0]+'"></div>'+
         '</div>'+
-        '<div class="row textrow row-centered">'+ 
+        '<div class="row maprow row-centered">'+
+          '<div class="col-xs-5 col-md-5 col-centered" id="bike-'+currentCityName+'"></div>'+
+          '<div class="col-xs-1 col-md-1 col-centered"></div>'+
+          '<div class="col-xs-5 col-md-5 col-centered" id="car-'+currentCityName+'"></div>'+
+        '</div>'+
+        '<div class="row textrow row-centered">'+
           '<div class="col-xs-11 col-md-11 col-centered title"></div>'+
         '</div>'
         );
       } else {
         $("#mainSqueeze").append(
-        '<div class="row textrow row-centered">'+ 
-          '<div class="col-xs-11 col-centered title"><h2>'+cities[0][0]+'</h2></div>'+
+        '<div class="row textrow row-centered">'+
+          '<div class="col-xs-11 col-centered title"><h2>'+currentCityName+'</h2></div>'+
           '<div class="col-xs-11 col-centered title"></div>'+
-        '</div>'+ 
-        '<div class="row maprowmobile row-centered">'+
-          '<div class="col-xs-11 col-centered" id="bike-'+cities[0][0]+'"></div>'+
-          '<div class="col-xs-2  col-centered title"></div>'+
-          '<div class="col-xs-11 col-centered" id="car-'+cities[0][0]+'"></div>'+
         '</div>'+
-        '<div class="row textrow row-centered">'+ 
+        '<div class="row maprowmobile row-centered">'+
+          '<div class="col-xs-11 col-centered" id="bike-'+currentCityName+'"></div>'+
+          '<div class="col-xs-2  col-centered title"></div>'+
+          '<div class="col-xs-11 col-centered" id="car-'+currentCityName+'"></div>'+
+        '</div>'+
+        '<div class="row textrow row-centered">'+
           '<div class="col-xs-11 col-centered title"></div>'+
         '</div>'
         );
@@ -241,7 +244,7 @@ $(document).ready(function () {
   //run the above
   windowWidth = window.innerWidth;
   loadCity(cities, windowWidth)
-  
+
   }
   google.maps.event.addDomListener(window, 'load', initialize);
 });
