@@ -122,27 +122,17 @@ $(document).ready(function () {
 
     //cities names, coords
     var cities = [
-      ['New York', 40.713658, -73.981054],
-      ['Los Angeles', 34.0194, -118.4108],
-      ['Chicago', 41.8376, -87.6818],
-      ['Houston', 29.7805, -95.3863],
-      ['Philadelphia', 40.0094, -75.1333],
-      ['Phoenix', 33.5722, -112.088],
-      ['San Antonio', 29.4724, -98.5251],
-      ['San Diego', 29.4724, -98.5251],
-      ['Dallas', 32.7757, -96.7967],
-      ['San Jose' , 37.2969, -121.8193],
-      ['Austin', 30.3072, -97.756],
-      ['Indianapolis', 39.7767, -86.1459],
-      ['Jacksonville', 30.337, -81.6613],
-      ['San Francisco', 37.7751, -122.4193],
-      ['Columbus', 39.9848, -82.985],
-      ['Charlotte', 35.2087, -80.8307],
-      ['Fort Worth', 32.7795, -97.3463],
-      ['Detroit', 42.383, -83.1022],
-      ['El Paso', 31.8484, -106.427],
-      ['Memphis ', 35.1035, -89.9785]
-    ]
+      ['Stockholm', 59.3333222, 18.0259976],
+      ['Gothenburg', 57.7009921, 11.8935976],
+      ['Malmö', 55.5708412, 13.0201101],
+      ['Uppsala', 59.8332794, 17.6584471],
+      ['Västerås', 59.624592, 16.5450907],
+      ['Örebro', 59.2780735, 15.2024545],
+      ['Linköping', 58.403448, 15.6107735],
+      ['Helsingborg', 56.0352678, 12.728175],
+      ['Jönköping', 57.7559456, 14.188254],
+      ['Norrköping', 58.586664, 16.1842545]
+    ];
 
     //function to set the center of the map for each city and other options
     function setMapOptions(lat, lng) {
