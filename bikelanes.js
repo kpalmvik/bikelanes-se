@@ -212,7 +212,6 @@ $(document).ready(function () {
         $("#mainSqueeze").append(
         '<div class="row textrow row-centered">'+
           '<div class="col-xs-11 col-md-11 col-centered title"><h2>'+currentCityName+'</h2></div>'+
-          '<div class="col-xs-11 col-md-11 col-centered title"></div>'+
         '</div>'+
         '<div class="row maprow row-centered">'+
           '<div class="col-xs-5 col-md-5 col-centered" id="bike-'+currentCityName+'"></div>'+
@@ -227,7 +226,6 @@ $(document).ready(function () {
         $("#mainSqueeze").append(
         '<div class="row textrow row-centered">'+
           '<div class="col-xs-11 col-centered title"><h2>'+currentCityName+'</h2></div>'+
-          '<div class="col-xs-11 col-centered title"></div>'+
         '</div>'+
         '<div class="row maprowmobile row-centered">'+
           '<div class="col-xs-11 col-centered" id="bike-'+currentCityName+'"></div>'+

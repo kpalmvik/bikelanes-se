@@ -4,34 +4,46 @@
     <title>Bike Lanes SE</title>
     <meta charset="utf-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css" />
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.ie.min.css" />
+    <![endif]-->
     <link rel='stylesheet' type='text/css' href='style.css'>
   </head>
   <body>
+    <div class="github-fork-ribbon-wrapper right">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/kpalmvik/bikelanes-se">Fork me on GitHub</a>
+        </div>
+    </div>
     <div class="container-fluid" id="mainSqueeze">
-      <div class="row row-centered textrow">
-        <div class="col-xs-11 col-md-11 col-centered intro">
-          <h1><span class="bikelane">Bike Lanes</span> vs <span class ='carlane'>Car Lanes</span></h1>
+      <div class="row textrow">
+        <div class="col-xs-10 col-xs-offset-1 col-s-8 col-s-offset-2 intro">
+          <h1><span class="bikelane">Bike Lanes</span> vs <span class ='carlane'>Car Lanes</span> in Sweden</h1>
           <p>
-            Wonkblog of Washington Post fame recently
+            Washington Post recently
             <a href='http://www.washingtonpost.com/blogs/wonkblog/wp/2015/04/01/bleak-maps-of-how-cities-look-using-only-their-bike-lanes/?tid=sm_fb' target="_blank">published</a>
-            a great set of maps showing the bike lanes for DC, Boston, Miami and Seattle.
+            a great set of maps showing only the bike lanes for Washington DC, Boston, Miami and Seattle.
           </p>
           <p>
-            <a href="https://github.com/andrewjtimmons">Andrewjtimmons</a> wrote the code to show <a href="http://andrewjtimmons.github.io/bikelanes">bike vs car lanes for top 20 most populated cities in America</a>.
+            Inspired by this,
+            <a href="https://github.com/andrewjtimmons">Andrew J. Timmons</a>
+            decided to use Google Maps to show
+            <a href="http://andrewjtimmons.github.io/bikelanes">bike lanes and car lanes for the top 20 most populated cities in America</a>. <a href="http://kristofer.palmvik.se">Kristofer Palmvik</a>
+            forked the code to create similar maps of the
+            <a href="http://en.wikipedia.org/wiki/List_of_cities_in_Sweden">ten largest cities in Sweden</a>.
           </p>
           <p>
-            This page includes maps of the ten largest cities in Sweden, as listed on <a href="http://en.wikipedia.org/wiki/List_of_cities_in_Sweden">Wikipedia: List of cities in Sweden</a>.
-          </p>
-          <p>
-            Thie first map for each city shows dedicated bike routes in dark green,
+            The first map for each city shows dedicated bike routes in dark green,
             bike lanes in light green, and recommended routes in dashed green.
             The second map shows car lanes in red.
           </p>
         </div>
       </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDIFAQSE48ikUI7IlZJl358unrxOTj83u4'></script>
+    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCk1GmWXGtbVQscHpzlGj6Ig82ez2R99_Y'></script>
     <script type='text/javascript' src='bikelanes.js'></script>
    </div>
   </body>
