@@ -122,16 +122,16 @@ $(document).ready(function () {
 
     //cities names, coords
     var cities = [
-      ['Stockholm', 59.3333222, 18.0259976],
-      ['Gothenburg', 57.7009921, 11.8935976],
-      ['Malmö', 55.5708412, 13.0201101],
-      ['Uppsala', 59.8332794, 17.6584471],
-      ['Västerås', 59.624592, 16.5450907],
-      ['Örebro', 59.2780735, 15.2024545],
-      ['Linköping', 58.403448, 15.6107735],
-      ['Helsingborg', 56.0352678, 12.728175],
-      ['Jönköping', 57.7559456, 14.188254],
-      ['Norrköping', 58.586664, 16.1842545]
+      ['Stockholm', 59.329444, 18.068611],
+      ['Gothenburg', 57.706944, 11.966389],
+      ['Malmö', 55.605833, 13.0025],
+      ['Uppsala', 59.858333, 17.65],
+      ['Västerås', 59.609722, 16.546389],
+      ['Örebro', 59.273944, 15.213361],
+      ['Linköping', 58.410833, 15.621389],
+      ['Helsingborg', 56.049722, 12.699722],
+      ['Jönköping', 57.782778, 14.160556],
+      ['Norrköping', 58.591944, 16.185556]
     ];
 
     //function to set the center of the map for each city and other options
